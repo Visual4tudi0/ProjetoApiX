@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36212.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoWebApiX", "ProjetoWebApiX\ProjetoWebApiX.csproj", "{759DC6AB-69F4-4AB4-861B-33C9425B8181}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6C4A9B86-DF3E-49E7-B175-48B06E8709ED} = {6C4A9B86-DF3E-49E7-B175-48B06E8709ED}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProjetoData", "ProjetoData", "{DAC2D165-1510-4004-86CF-5D4B0ED03084}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProjetoDomain", "ProjetoDomain", "{AFE1C789-8D60-4FFD-A20B-10CDCC436B89}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProjetoService", "ProjetoService", "{AC9518CA-3624-45C8-A667-ACE9798C2D57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryDomain", "ClassLibraryDomain\ClassLibraryDomain.csproj", "{4C928A45-01A8-48FC-816C-11A752B84F63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1Service", "ClassLibrary1Service\ClassLibrary1Service.csproj", "{7E65B0FE-2C75-4232-94B1-BBE5FB452356}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4C928A45-01A8-48FC-816C-11A752B84F63} = {4C928A45-01A8-48FC-816C-11A752B84F63}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryData1", "ClassLibraryData1\ClassLibraryData1.csproj", "{6C4A9B86-DF3E-49E7-B175-48B06E8709ED}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4C928A45-01A8-48FC-816C-11A752B84F63} = {4C928A45-01A8-48FC-816C-11A752B84F63}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{759DC6AB-69F4-4AB4-861B-33C9425B8181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{759DC6AB-69F4-4AB4-861B-33C9425B8181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{759DC6AB-69F4-4AB4-861B-33C9425B8181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{759DC6AB-69F4-4AB4-861B-33C9425B8181}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C928A45-01A8-48FC-816C-11A752B84F63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C928A45-01A8-48FC-816C-11A752B84F63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C928A45-01A8-48FC-816C-11A752B84F63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C928A45-01A8-48FC-816C-11A752B84F63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E65B0FE-2C75-4232-94B1-BBE5FB452356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E65B0FE-2C75-4232-94B1-BBE5FB452356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E65B0FE-2C75-4232-94B1-BBE5FB452356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E65B0FE-2C75-4232-94B1-BBE5FB452356}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C4A9B86-DF3E-49E7-B175-48B06E8709ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C4A9B86-DF3E-49E7-B175-48B06E8709ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C4A9B86-DF3E-49E7-B175-48B06E8709ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C4A9B86-DF3E-49E7-B175-48B06E8709ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{759DC6AB-69F4-4AB4-861B-33C9425B8181} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{4C928A45-01A8-48FC-816C-11A752B84F63} = {AFE1C789-8D60-4FFD-A20B-10CDCC436B89}
+		{7E65B0FE-2C75-4232-94B1-BBE5FB452356} = {AC9518CA-3624-45C8-A667-ACE9798C2D57}
+		{6C4A9B86-DF3E-49E7-B175-48B06E8709ED} = {DAC2D165-1510-4004-86CF-5D4B0ED03084}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C1FFE69-110E-4B77-94BD-45CC0FB284EF}
+	EndGlobalSection
+EndGlobal

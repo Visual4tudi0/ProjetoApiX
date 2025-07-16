@@ -1,0 +1,6 @@
+@ProjetoWebApiX_HostAddress = http://localhost:5197
+
+GET {{ProjetoWebApiX_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
