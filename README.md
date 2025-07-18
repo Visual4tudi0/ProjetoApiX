@@ -1,6 +1,6 @@
 # Documentação da API de Produtos e Categorias
 ## Esta documentação descreve os endpoints da API para gerenciamento de Produtos e Categorias, com exemplos de requisições utilizando cURL.
-
+##
 ## Base URL: http://localhost:5000/api
 
 ## 1. Categoria Controller (/api/Categoria)
