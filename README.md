@@ -20,4 +20,78 @@ Para Produto: É necessário informar o nome, um valor maior que zero e um estoq
 ## Camada Service 
 O service é onde esta toda a logica do funcionamento da APi
 
+# 📦 API - Sistema de Produtos e Categorias
 
+**Base URL:** `http://localhost:5000/api`
+
+---
+
+## 📘 Endpoints disponíveis
+
+### ✅ ProdutoController
+
+#### 🔍 Listar todos os produtos
+
+```bash
+curl -X GET http://localhost:5000/api/produto
+🔎 Buscar produto por ID
+bash
+Copiar
+Editar
+curl -X GET http://localhost:5000/api/produto/{id}
+Substitua {id} pelo GUID do produto.
+
+➕ Adicionar produto
+bash
+Copiar
+Editar
+curl -X POST http://localhost:5000/api/produto \
+  -H "Content-Type: application/json" \
+  -d '{
+    "nome": "Exemplo de Produto",
+    "descricao": "Descrição do produto",
+    "quantidadeEstoque": 100,
+    "codigoDeBarras": "7891234567890",
+    "marca": "Marca Exemplo",
+    "id": "opcional"
+}'
+✏️ Atualizar produto
+bash
+Copiar
+Editar
+curl -X PUT http://localhost:5000/api/produto/{id} \
+  -H "Content-Type: application/json" \
+  -d '{
+    "id": "{id}",
+    "nome": "Produto Atualizado",
+    "descricao": "Nova descrição",
+    "quantidadeEstoque": 80,
+    "codigoDeBarras": "7891234567890",
+    "marca": "Marca Atualizada"
+}'
+🗑️ Remover produto
+bash
+Copiar
+Editar
+curl -X DELETE http://localhost:5000/api/produto/{id}
+📂 CategoriaController
+📋 Listar todas as categorias
+bash
+Copiar
+Editar
+curl -X GET http://localhost:5000/api/categoria
+🔎 Buscar categoria por ID
+bash
+Copiar
+Editar
+curl -X GET http://localhost:5000/api/categoria/{id}
+➕ Adicionar categoria
+bash
+Copiar
+Editar
+curl -X POST http://localhost:5000/api/categoria \
+  -H "Content-Type: application/json" \
+  -d '{
+    "nome": "Categoria Exemplo",
+    "descricao": "Descrição da categoria"
+}'
