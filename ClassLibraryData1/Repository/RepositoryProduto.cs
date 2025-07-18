@@ -12,9 +12,9 @@ namespace ClassLibraryData1.Repository
     {
         public RepositoryProduto(AppDbContext context) : base(context) { }
 
-        public async Task<IEnumerable<Produto>> ListarComCategoriaAsync()
+        public async Task<IEnumerable<ProdutoEntity>> ListarComCategoriaAsync()
         {
-            return await _context.Set<Produto>().Include(p => p.Categoria).ToListAsync();
+            return await _context.Produtos.Include(p => p.CategoriaEntity).ToListAsync();
         }
     }
 }

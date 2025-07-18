@@ -65,7 +65,7 @@ namespace ClassLibrary1Service.Service
 
         public async Task<IEnumerable<Produto>> ListarTodosProdutos()
         {
-            var produtoEntities = await _unitOfWork.Produtos.GetAllAsync();
+            var produtoEntities = await _unitOfWork.Produtos.ListarComCategoriaAsync();
 
             var produtoModels = _mapper.Map<IEnumerable<Produto>>(produtoEntities);
 
@@ -91,40 +91,11 @@ namespace ClassLibrary1Service.Service
             return produtoModel;
         }
 
-        /// <summary>
-        /// Método privado para calcular e aplicar a variação do dólar ao PrecoReal.
-        /// </summary>
-        /// <param name="produtoModel">O modelo do produto para aplicar a variação.</param>
         private async Task AplicarVariacaoDolar(Produto produtoModel)
         {
             var variacaoDolar = await _restCotacaoDolar.ObterVariacaoDolarAsync();
-            // Multiplicar o valor da variação da moeda ao PrecoReal
-            // Assumindo que PrecoBase é a base para o cálculo e PrecoReal é o que será exibido.
-            // Se PrecoReal já tiver um valor, ajuste a lógica. Aqui, estou usando PrecoBase da entity.
-            // Para isso, precisaria buscar o PrecoBase da entity original ou passar na model.
-            // Para simplificar, vou assumir que PrecoReal na Model é o PrecoBase da Entity no momento da chamada,
-            // ou que PrecoBase é um campo que você também está mapeando para a Model e será a base.
-            // Vamos usar o PrecoBase da entidade mapeada (PrecoBase da entity).
-            // IMPORTANTE: Para o PrecoReal ser calculado, o mapeamento do AutoMapper para ProdutoModel
-            // precisaria não ignorar PrecoReal, ou você precisaria do PrecoBase da entity.
-            // Considerando o escopo, PrecoReal será calculado *a partir* do PrecoBase da entidade.
 
-            // Primeiro, obtenha o PrecoBase da entidade correspondente ao Model.
-            // Isso requer que a entidade base esteja disponível ou que o ProdutoModel
-            // contenha o PrecoBase da entidade.
-            // Para simplificar, vamos assumir que o ProdutoModel tem um PrecoBase
-            // que é mapeado da Entity, e PrecoReal é derivado dele.
-            // Ou que a operação PrecoReal * variacaoDolar já é o que se espera.
-
-            // Vou usar o PrecoBase que estaria na entidade original antes do mapeamento para Model.
-            // Uma forma mais direta seria ter o PrecoBase no ProdutoModel para esse cálculo.
-            // Vou assumir que o ProdutoModel tem um PrecoBase ou que PrecoReal é a base inicial.
-            // Baseado na sua definição: "Com o valor da variação da moeda em mãos, voce irá multiplicar esse valor ao seu PrecoReal (propriedade de ProdutoModel) toda vez que exibir os dados ao usuario."
-            // Isso implica que PrecoReal já tem um valor inicial para ser multiplicado.
-            // Se PrecoReal não tiver um valor inicial, ele deveria ser calculado a partir de PrecoBase.
-
-            // Assumindo que PrecoReal no ProdutoModel É o PrecoBase que veio da Entity ou foi setado:
-            produtoModel.PrecoReal *= variacaoDolar; // Multiplica o PrecoReal pelo fator de variação
+            produtoModel.PrecoReal *= variacaoDolar; 
         }
 
 

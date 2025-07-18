@@ -29,8 +29,10 @@ namespace ProjetoWebApiX.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ProdutoDto>>> GetTodos()
         {
+            
             var produtos = await _serviceProduto.ListarTodosProdutos();
-            return Ok(_mapper.Map<IEnumerable<ProdutoDto>>(produtos));
+            
+            return Ok(produtos);
         }
 
         [HttpGet("{id}")]
