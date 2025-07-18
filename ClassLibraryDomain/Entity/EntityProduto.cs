@@ -12,6 +12,6 @@ namespace ClassLibraryDomain.Entity
         public decimal PrecoBase { get; set; }
         public int Estoque { get; set; }
         public Guid CategoriaId { get; set; }
-        public CategoriaEntity CategoriaEntity { get; set; }
+        public CategoriaEntity CategoriaEntity { get; set; } 
     }
 }
