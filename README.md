@@ -1,12 +1,12 @@
-Documentação da API de Produtos e Categorias
-Esta documentação descreve os endpoints da API para gerenciamento de Produtos e Categorias, com exemplos de requisições utilizando cURL.
+# Documentação da API de Produtos e Categorias
+## Esta documentação descreve os endpoints da API para gerenciamento de Produtos e Categorias, com exemplos de requisições utilizando cURL.
 
-Base URL: http://localhost:5000/api
+## Base URL: http://localhost:5000/api
 
-1. Categoria Controller (/api/Categoria)
+## 1. Categoria Controller (/api/Categoria)
 Gerencia as operações relacionadas a categorias.
 
-1.1. Obter Todas as Categorias
+# 1.1. Obter Todas as Categorias
 Recupera uma lista de todas as categorias cadastradas.
 
 Endpoint: GET /api/Categoria
@@ -21,7 +21,7 @@ Exemplo cURL:
 Bash
 
 curl -X GET "http://localhost:5000/api/Categoria"
-1.2. Obter Categoria por ID
+# 1.2. Obter Categoria por ID
 Recupera uma categoria específica pelo seu ID.
 
 Endpoint: GET /api/Categoria/{id}
@@ -44,7 +44,7 @@ Bash
 curl -X GET "http://localhost:5000/api/Categoria/9b0d2a4f-7b1e-4c8d-8c0e-6f7a8b9c0d1e"
 Nota: Substitua 9b0d2a4f-7b1e-4c8d-8c0e-6f7a8b9c0d1e pelo ID real da categoria.
 
-1.3. Criar Nova Categoria
+# 1.3. Criar Nova Categoria
 Cria uma nova categoria.
 
 Endpoint: POST /api/Categoria
@@ -69,10 +69,10 @@ curl -X POST "http://localhost:5000/api/Categoria" \
      -d '{
            "nome": "Eletrônicos"
          }'
-2. Produto Controller (/api/Produto)
+## 2. Produto Controller (/api/Produto)
 Gerencia as operações relacionadas a produtos.
 
-2.1. Obter Todos os Produtos
+# 2.1. Obter Todos os Produtos
 Recupera uma lista de todos os produtos cadastrados.
 
 Endpoint: GET /api/Produto
@@ -87,7 +87,7 @@ Exemplo cURL:
 Bash
 
 curl -X GET "http://localhost:5000/api/Produto"
-2.2. Obter Produto por ID
+# 2.2. Obter Produto por ID
 Recupera um produto específico pelo seu ID.
 
 Endpoint: GET /api/Produto/{id}
@@ -110,7 +110,7 @@ Bash
 curl -X GET "http://localhost:5000/api/Produto/a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d"
 Nota: Substitua a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d pelo ID real do produto.
 
-2.3. Adicionar Novo Produto
+# 2.3. Adicionar Novo Produto
 Adiciona um novo produto.
 
 Endpoint: POST /api/Produto
@@ -148,7 +148,7 @@ curl -X POST "http://localhost:5000/api/Produto" \
          }'
 Nota: Substitua 9b0d2a4f-7b1e-4c8d-8c0e-6f7a8b9c0d1e pelo ID real de uma categoria existente.
 
-2.4. Atualizar Produto Existente
+# 2.4. Atualizar Produto Existente
 Atualiza um produto existente.
 
 Endpoint: PUT /api/Produto/{id}
@@ -193,7 +193,7 @@ curl -X PUT "http://localhost:5000/api/Produto/a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5
          }'
 Nota: Substitua os IDs pelos valores reais.
 
-2.5. Remover Produto
+# 2.5. Remover Produto
 Remove um produto existente.
 
 Endpoint: DELETE /api/Produto/{id}
