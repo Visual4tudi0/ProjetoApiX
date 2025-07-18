@@ -15,7 +15,7 @@ namespace ClassLibraryDomain.Models
         public decimal PrecoReal { get; set; }
         public int Estoque { get; set; }
         public Guid CategoriaId { get; set; }
-        [JsonIgnore]
+        [JsonIgnore] //
         public Categoria Categoria { get; set; }
     }
 }    
