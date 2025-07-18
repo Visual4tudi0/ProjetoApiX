@@ -14,7 +14,7 @@ namespace ClassLibraryData1.Repository
 
         public async Task<List<CategoriaEntity>> BuscarTodasCategoriasServicos()
         {
-            return await _context.Categorias.Include(e => e.Produtos).ToListAsync();
+            return await _context.Categorias.Include(e => e.Produtos).ToListAsync();  
         }
     }
 }

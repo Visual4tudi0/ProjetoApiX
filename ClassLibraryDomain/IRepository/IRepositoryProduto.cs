@@ -9,6 +9,6 @@ namespace ClassLibraryDomain.IRepository
 {
     public interface IRepositoryProduto : IRepositoryBase<ProdutoEntity>
     {
-        public Task<IEnumerable<Produto>> ListarComCategoriaAsync();
+        public Task<IEnumerable<ProdutoEntity>> ListarComCategoriaAsync();
     }
 }

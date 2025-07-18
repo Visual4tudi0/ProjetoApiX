@@ -11,8 +11,8 @@ namespace ClassLibraryData1.Mapping {
         {
         public MappingProfile()
         {
-            //CreateMap<Produto, ProdutoDto>().ReverseMap();
-            //CreateMap<Categoria, CategoriaDto>().ReverseMap();  
+            CreateMap<Produto, ProdutoDto>().ReverseMap();
+            CreateMap<Categoria, CategoriaDto>().ReverseMap();  
             CreateMap<ProdutoEntity, Produto>()
                 .ForMember(dest => dest.PrecoReal, opt => opt.Ignore())
                 .ReverseMap();
