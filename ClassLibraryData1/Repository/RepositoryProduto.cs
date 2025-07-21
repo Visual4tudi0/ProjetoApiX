@@ -1,4 +1,5 @@
 ﻿using ClassLibraryData1.Context;
+using ClassLibraryData1.Rest;
 using ClassLibraryDomain.Entity;
 using ClassLibraryDomain.IRepository;
 using ClassLibraryDomain.Models;
@@ -14,7 +15,7 @@ namespace ClassLibraryData1.Repository
 
         public async Task<IEnumerable<ProdutoEntity>> ListarComCategoriaAsync()
         {
-            return await _context.Produtos.Include(p => p.CategoriaEntity).ToListAsync();
+            return await _context.Produtos.Include(p => p.CategoriaEntity).ToListAsync();  
         }
     }
 }
