@@ -157,7 +157,8 @@ namespace ClassLibraryData1.Rest
        public async Task<decimal> GetCotacaoDolarHoje()
         {
             var hoje = DateTime.UtcNow.Date;
-            var hojeResponse = await _httpClient.GetFromJsonAsync<List<ResponseDolar>>(_options.Value.UrlDolar + $"{hoje:yyyyMMdd}&end_date={hoje:yyyyMMdd}");
+            var hojeUrl = $"https://economia.awesomeapi.com.br/json/daily/USD-BRL/1?start_date={hoje:yyyyMMdd}&end_date={hoje:yyyyMMdd}";
+            var hojeResponse = await _httpClient.GetFromJsonAsync<List<ResponseDolar>>(hojeUrl);
             if (hojeResponse == null ||  !hojeResponse.Any() )
                 return 1;
             decimal hojeValor = decimal.Parse(hojeResponse[0].bid, CultureInfo.InvariantCulture);

@@ -72,8 +72,7 @@ namespace ClassLibrary1Service.Service
             foreach (var produtoModel in produtoModels)
             {
                 await AplicarVariacaoDolar(produtoModel);
-            }
-
+            };
             return produtoModels;
         }
 
@@ -94,7 +93,6 @@ namespace ClassLibrary1Service.Service
         private async Task AplicarVariacaoDolar(Produto produtoModel)
         {
             var variacaoDolar = await _restCotacaoDolar.ObterVariacaoDolarAsync();
-
             produtoModel.PrecoReal *= variacaoDolar; 
         }
 
